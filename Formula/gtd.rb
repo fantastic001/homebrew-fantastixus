@@ -14,7 +14,7 @@ class Gtd < Formula
 
   def install
     # virtualenv_install_with_resources
-    py = Formula["python@3.12"].opt_bin/"python3.12"
+    py = Formula["python@3.9"].opt_bin/"python3.9"
     venv = virtualenv_create(libexec, python: py)   # ✅ keyword arg
 
     venv.pip_install "pip", "setuptools", "wheel"
