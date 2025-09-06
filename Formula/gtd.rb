@@ -1,4 +1,4 @@
-class GTD < Formula
+class Gtd < Formula
   include Language::Python::Virtualenv
 
   desc "Task management and reporting tool"
