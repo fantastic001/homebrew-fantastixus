@@ -14,8 +14,7 @@ class Gtd < Formula
 
   def install
     # virtualenv_install_with_resources
-    py = Formula["python@3.9"].opt_bin/"python3.9"
-    venv = virtualenv_create(libexec, python: py)   # ✅ keyword arg
+    venv = virtualenv_create(libexec)   # ✅ keyword arg
 
     venv.pip_install "pip", "setuptools", "wheel"
     # ↓ No --no-deps: pip resolves deps from pyproject.toml
