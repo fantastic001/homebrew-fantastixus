@@ -13,13 +13,7 @@ class Gtd < Formula
   depends_on "python@3.9"
 
   def install
-    # virtualenv_install_with_resources
-    venv = virtualenv_create(libexec)   # ✅ keyword arg
-
-    venv.pip_install "pip", "setuptools", "wheel"
-    # ↓ No --no-deps: pip resolves deps from pyproject.toml
-    venv.pip_install buildpath
-    venv.pip_install_and_link buildpath
+    virtualenv_install_with_resources
   end
 
   test do
